@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Accordion</title>
+  <style>
+  
+        .accordion {
+            display: block;
+            margin: 2px 1px;
+            background: #ddd;
+            padding: 10px 5px;
+            text-decoration: none;
+        }
+
+        .section {
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+            overflow: hidden;
+        }
+
+        .section.active {
+            max-height: 100%;
+        }
+  
+  </style>
+</head>
+<body>
+  
+
+    <a href="javascript:;" class="accordion" section="1">ONE</a>
+    <div class="section" id="1">
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </div>
+  
+    <a href="javascript:;" class="accordion" section="2">TWO</a>
+    <div class="section" id="2">
+       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+    </div>
+  
+    <a href="javascript:;" class="accordion" section="3">THREE</a>
+    <div class="section" id="3">
+       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    </div>
+    
+
+</body>
+
+<script>
+
+function attachHandlers(elems) {
+  elems.forEach(item => {
+    item.addEventListener('click', () => {
+      const active = document.querySelector('.active');
+      const sibling = item.nextElementSibling;
+      const activeId = active ? active.id : 0;
+      
+      if (active) {
+        active.classList.toggle('active');
+        active.style.maxHeight = null;
+      }
+
+      if (activeId != item.getAttribute('section')) {
+         sibling.classList.add('active');
+         sibling.style.maxHeight = sibling.scrollHeight + "px";
+      }
+    })
+  })
+}
+
+const accordions = document.querySelectorAll('.accordion');
+const sections = document.querySelectorAll('.section')
+attachHandlers(accordions);
+
+</script>
+</html>

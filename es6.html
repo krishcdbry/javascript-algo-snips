@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ES6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        pre {
+            padding: 15px;
+            margin: 2px 5px;
+            position: relative;
+            background: #f0f0f0;
+            padding: 26px 5px;
+            margin: 9px 0px;
+        }
+    </style>
+</head>
+<body>
+  
+<h1>ES6</h1> 
+6 Major release of Javascript also known as ES2015
+<br/><br/>
+
+<h2>Features</h2>
+</hr>
+
+
+<h3>Constants</h3>
+<span class="desc">
+    To achieve immutability. 
+</span>
+
+<span class="example">Example :</span> 
+<pre>
+const API_KEY = "SQWER243!@$#ER55"
+console.log(API_KEY);  // Which cannot be changed.
+</pre>
+
+
+<h3>Scoping</h3>
+<span class="desc">
+    ES6 Introduced block level scoping for both variables and functions
+"let" - Keyword. We can use this in place of var for block level scoping.
+
+</span>
+
+<span class="example">Example :</span> 
+<pre>
+ for (var i = 0; i < 5; i++) {
+    setTimeout(function() {
+        console.log(i);
+    }, 100);
+ }
+
+ // This prints 55555 - Once after timeout the i values reaches to 5 hence it prints 5 for 5 times. Here i is in function level scoping
+
+ // Now with ES6
+
+ for (let i=0; i < 5; i++) {
+     setTimeout(() => {
+         console.log(i);
+     }, 100);
+ }
+
+ // This prints 1,2,3,4,5 because 'i' is having block level scoping hence in every iteration i is independent
+</pre>
+<pre>
+    // Block scoped function
+    {
+        function name() {
+            return "krish"
+        }
+        
+        name() // returns krish
+
+        {
+            function name() {
+                return "cdbry"
+            }
+
+            name() // returns cdbry
+        }
+
+        name() // returns krish
+    }
+</pre>
+
+
+<h3>Arrow Functions</h3>
+<span class="desc">
+    Main difference between normal functions and arrow functions
+    1. Arguments (There is no argument binding)
+    2. This 
+
+    If we try to access 
+    this - it gives undefeind 
+    arguments - Reference error
+</span>
+
+<span class="example">Example :</span> 
+<pre>
+    let nums = [1,2,3,4,5]
+
+    nums.map((item) => item*2)  // Prints [2, 4, 6, 8, 10]
+
+    nums.map((item) => {
+        if (item%2 == 0 && item > 1) {
+            return item*10
+        }
+        else {
+            return item*2
+        }
+    })
+
+    // Prints [2, 20, 6, 40, 10]
+</pre>  
+
+
+<h3>Parameter Handling</h3>
+<span class="desc">
+   Default values -  Now in JS we can give default values for parameters. 
+</span>
+<span class="example">Example</span>
+<pre>
+    function greet (first="krish", last="cdbry") {
+        console.log("Hello, " + first + last)
+    }
+    greet(); //  "Hello, krishcdbry"
+    greet("KING"); // "Hello, KINGcdbry"
+</pre>
+
+<span class="desc">
+    Rest parameter - All the paramters can be accessed with rest operator 
+</span>
+<pre>
+    function rest(a, ...c) {
+        console.log(c);
+    }
+
+    rest(5,6,7,8,9);  // [6,7,8,9]
+</pre>
+
+<span class="desc">
+    Spread Operator - Spreading of elements of an iterable collection into both 
+    liternal elements and individual function parameters
+</span>
+<pre>
+    let params = ["krish", true, 7];
+    let moreParams = [1,2,3 ...params];
+
+    function fun (x, y, ...a) {
+        console.log(a);
+    }
+    fun(1,2,...params);
+</pre>
+
+<h3>Template Literals</h3>
+<span class="desc">
+    String Interpolation
+</span>
+<pre>
+    let a = "krish"
+    let b = "cdbry"
+    
+    console.log(`${a} ${b}`);  
+    console.log(`${a * b}`);  
+</pre>
+
+<span class="desc">
+        Custom Interpolation
+    </span>
+    <pre>
+        let a = "krish"
+        let b = "cdbry"
+        
+        console.log(`${a} ${b}`);  
+        console.log(`${a * b}`);  
+    </pre>
+
+
+<h3>Octal/Binary representation</h3>
+<span class="desc">
+    In ES6 now we can represent both octal and binary representation.
+</span>
+<pre>
+    // Binary and octal 
+
+    "0b" - binary 
+    "Oo" - Octal
+
+    console.log(0b111110111)  // 503
+    console.log(0o767)        // 503
+</pre>
+
+<h3>Enhanced Object Properties</h3>
+<span class="desc">
+    Shorter syntax for common object property definition idioms
+</span>
+<pre>
+   let x = 5, y = 10;
+
+    Obj = {
+        x, y
+    }
+
+    console.log(x,y); // { x:5, y:10 }
+</pre>
+
+<span class="desc">
+       Computed property names
+</span>
+<pre>
+    let sum = () => {
+        return 5;
+    }
+
+    let obj = {
+        name : "krish",
+        ["bar" + sum()] : 42
+    }
+
+    console.log(obj);  //  { name : krish, bar5: 42 }
+</pre>
+
+
+<span class="desc">
+    Method properites
+</span>
+<pre>
+        let objFun = {
+            foo (a, b) {
+              
+            },
+            bar (c, d) {
+              
+            }
+       }
+       console.log(objFun);  //  {  foo : function (a, b) {}, bar: function (c,d) {}  }
+</pre>
+
+
+<h3>
+    Destructuring Assignment 
+</h3>
+<span class="desc">
+    Array matching - Assigning the array values to the individual variables 
+</span>
+<pre>
+    var list = [1, 2, 3];
+    var [a, b] = list;
+    console.log(a, b)  // 1, 2
+
+
+    let objDest = {
+        name : "Mohana Krishna",
+        age : "25"
+    }
+
+    let {name, age} = objDest;
+
+    console.log(name, age);  // Mohana Krishna  25
+
+  
+    // No value then undefined
+
+    let {sex} = objDest;
+
+    console.log(sex); // undefined
+</pre>
+
+<h3>Symbol Type</h3>
+<span>
+    Unique and immutable data type to be used as an 
+    identifier for object properties.
+
+</span>
+<pre>
+Symbol("foo") !== Symbol("foo")
+
+</pre>
+
+
+</body>
+
+
+

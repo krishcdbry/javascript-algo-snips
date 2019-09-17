@@ -1,0 +1,17 @@
+{
+  "name": "javascript-series",
+  "version": "1.0.0",
+  "description": "",
+  "main": "findduplicates.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage --notify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
