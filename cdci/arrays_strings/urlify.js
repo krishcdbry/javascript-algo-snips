@@ -13,6 +13,18 @@
  * @returns {boolean}
  */
 
- const URLify = (str, length) => {
-
+const URLify = (str, length) => {
+    let i = 0;
+    while (i < length) {
+        if (str[i] == " ") {
+          str = str.substring(0,i) + "%20" + str.substring(i+1, length);
+          i = i+2; 
+          length = length+2;
+        }
+        i++;
+    }
+    return str;
  }
+ 
+
+ module.exports = URLify;
