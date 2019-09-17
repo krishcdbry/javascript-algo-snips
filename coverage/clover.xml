@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1568756230899" clover="3.2.0">
-  <project timestamp="1568756230899" name="All files">
-    <metrics statements="117" coveredstatements="116" conditionals="40" coveredconditionals="35" methods="13" coveredmethods="13" elements="170" coveredelements="164" complexity="0" loc="117" ncloc="117" packages="3" files="8" classes="8"/>
+<coverage generated="1568760920057" clover="3.2.0">
+  <project timestamp="1568760920057" name="All files">
+    <metrics statements="126" coveredstatements="125" conditionals="44" coveredconditionals="38" methods="15" coveredmethods="15" elements="185" coveredelements="178" complexity="0" loc="126" ncloc="126" packages="3" files="9" classes="9"/>
     <package name="javascript-series">
       <metrics statements="22" coveredstatements="22" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4"/>
       <file name="coinchange.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/coinchange.js">
@@ -110,7 +110,7 @@
       </file>
     </package>
     <package name="javascript-series.cdci.arrays_strings">
-      <metrics statements="31" coveredstatements="31" conditionals="12" coveredconditionals="10" methods="3" coveredmethods="3"/>
+      <metrics statements="40" coveredstatements="40" conditionals="16" coveredconditionals="13" methods="5" coveredmethods="5"/>
       <file name="is_permutation.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/arrays_strings/is_permutation.js">
         <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="10" count="1" type="stmt"/>
@@ -137,6 +137,18 @@
         <line num="15" count="18" type="cond" truecount="2" falsecount="0"/>
         <line num="17" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
+      </file>
+      <file name="palindrome_permutation.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/arrays_strings/palindrome_permutation.js">
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="63" type="stmt"/>
+        <line num="21" count="63" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="34" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="28" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
       <file name="urlify.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/arrays_strings/urlify.js">
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
