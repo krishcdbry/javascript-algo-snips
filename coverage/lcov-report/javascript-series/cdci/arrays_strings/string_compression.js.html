@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for javascript-series/cdci/arrays_strings/urlify.js</title>
+    <title>Code coverage report for javascript-series/cdci/arrays_strings/string_compression.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,18 +16,18 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">javascript-series/cdci/arrays_strings</a> urlify.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">javascript-series/cdci/arrays_strings</a> string_compression.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>17/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">83.33% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>5/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>15/15</span>
       </div>
     </div>
     <p class="quiet">
@@ -75,10 +75,11 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -91,49 +92,60 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * URLify: Write a method to replace all spaces in a string with '%20'. 
- * You may assume that the string has sufficient space at the end to hold the additional characters,
- * and that you are given the "true" length of the string. 
- * (Note: If implementing in Java,please use a character array so that you can perform this operation in place.)
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+/**
+ * String Compression: Implement a method to perform basic string compression using the counts of 
+ * repeated characters. For example, the string aabcccccaaa would become a2blc5a3. 
+ * If the "compressed" string would not become smaller than the original string, 
+ * your method should return the original string. You can assume the string has only uppercase 
+ * and lowercase letters (a - z).
  * 
- * EXAMPLE
- * Input: "Mr John Smith ", 13 
- * Output: "Mr%20John%20Smith"
- * @name URLify
+ * @name stringCompression
+ * @param {*} str 
  * @param {*} str
- * @param {*} length
- * @returns {boolean}
  */
+const stringCompression = (str) =&gt; {
+    let newString = "";
+    let currentChar = str[0];
+    let currentCount = 0;
+    let strLength = str.length;
 &nbsp;
-const URLify = (str, length) =&gt; {
-    let i = 0;
-    while (i &lt; length) {
-        if (str[i] == " ") {
-          str = str.substring(0,i) + "%20" + str.substring(i+1, length);
-          i = i+2; 
-          length = length+2;
+    for (let i = 0; i &lt; strLength; i++) {
+        if (currentChar != str[i]) {
+            newString += currentChar+currentCount;
+            if (newString.length &gt;= str.length) return str;
+            currentChar = str[i]; 
+            currentCount = 1;
         }
-        i++;
+        else currentCount++;
     }
-    return str;
- }
- 
 &nbsp;
- module.exports = URLify;</pre></td></tr>
+    newString += currentChar+currentCount;
+&nbsp;
+    return newString.length &gt;= str.length ? <span class="branch-0 cbranch-no" title="branch not covered" >str </span>: newString;
+}
+&nbsp;
+module.exports = stringCompression;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->

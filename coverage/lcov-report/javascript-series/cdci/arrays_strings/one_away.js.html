@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for javascript-series/cdci/arrays_strings/urlify.js</title>
+    <title>Code coverage report for javascript-series/cdci/arrays_strings/one_away.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">javascript-series/cdci/arrays_strings</a> urlify.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">javascript-series/cdci/arrays_strings</a> one_away.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>16/16</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
     <p class="quiet">
@@ -75,7 +75,9 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -91,49 +93,53 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">38x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * URLify: Write a method to replace all spaces in a string with '%20'. 
- * You may assume that the string has sufficient space at the end to hold the additional characters,
- * and that you are given the "true" length of the string. 
- * (Note: If implementing in Java,please use a character array so that you can perform this operation in place.)
+ * One Away: There are three types of edits that can be performed on strings: 
+ * insert a character, remove a character, or replace a character. Given two strings, 
+ * write a function to check if they are one edit (or zero edits) away.
  * 
  * EXAMPLE
- * Input: "Mr John Smith ", 13 
- * Output: "Mr%20John%20Smith"
- * @name URLify
- * @param {*} str
- * @param {*} length
- * @returns {boolean}
+ * pale, ple -&gt; true 
+ * pales, pale -&gt; true 
+ * pale, bale -&gt; true 
+ * pale, bake -&gt; false
+ * 
+ * @param {*} str1 
+ * @param {*} str2 
+ * #@returns {boolean}
  */
-&nbsp;
-const URLify = (str, length) =&gt; {
-    let i = 0;
-    while (i &lt; length) {
-        if (str[i] == " ") {
-          str = str.substring(0,i) + "%20" + str.substring(i+1, length);
-          i = i+2; 
-          length = length+2;
-        }
-        i++;
+const oneAway = (str1, str2) =&gt; {
+    const trackerObj = {};
+    for (let i = 0; i &lt; str2.length; i++) {
+        let item = str2[i];
+        if (trackerObj[item]) trackerObj[item]++;
+        else trackerObj[item] = 1;
     }
-    return str;
- }
- 
 &nbsp;
- module.exports = URLify;</pre></td></tr>
+    for (let i = 0; i &lt; str1.length; i++) {
+        let item = str1[i];
+        if (trackerObj[item]) trackerObj[item]--;
+    }
+&nbsp;
+    return Object.values(trackerObj).reduce((a, b) =&gt; a+b) &lt;= 1;
+}
+&nbsp;
+module.exports = oneAway;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
