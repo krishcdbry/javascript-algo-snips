@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+
+  <style>
+      
+        #outer {
+            width: 300px;
+            overflow: hidden;
+        }
+
+        #inner {
+            width: 900px;
+            display: flex;
+            transform: translateX(0px);
+            animation: carousel 10s infinite;
+            transition: transform 0.3s ease-out;
+        }
+
+        img {
+            width: 300px;
+            object-fit: cover; 
+        }
+
+        @keyframes carousel {
+            0% {
+                transform: translateX(0px);
+            }
+            33% {
+                transform: translateX(-300px);
+            }
+            66% {
+                transform: translateX(-600px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        @-webkit-keyframes carousel {
+            0% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(-300px);
+            }
+            100% {
+                transform: translateX(-600px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+  
+  </style>
+</head>
+<body>
+  
+ <div id="outer">
+   <div id="inner">
+     <img src="http://getwallpapers.com/wallpaper/full/1/b/1/1051789-1080p-nature-wallpaper-1920x1080-ios.jpg"/> 
+     <img src="https://wallpaperplay.com/walls/full/1/7/4/286153.jpg"/> 
+     <img src="https://cooldigital.photography/wp-content/uploads/2018/01/Waterfall-hidden-in-the-tropical-jungle-Nature-Wallpaper-620x413.jpg"/> 
+   </div>
+ </div>
+
+</body>
+</html>
