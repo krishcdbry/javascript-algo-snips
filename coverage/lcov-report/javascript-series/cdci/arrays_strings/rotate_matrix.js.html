@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for javascript-series/cdci/arrays_strings/is_permutation.js</title>
+    <title>Code coverage report for javascript-series/cdci/arrays_strings/rotate_matrix.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,18 +16,18 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">javascript-series/cdci/arrays_strings</a> is_permutation.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">javascript-series/cdci/arrays_strings</a> rotate_matrix.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">89.47% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>17/19</span>
+        <span class='fraction'>15/15</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/6</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>14/14</span>
+        <span class='fraction'>13/13</span>
       </div>
     </div>
     <p class="quiet">
@@ -72,11 +72,7 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -86,57 +82,49 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * Given two strings,write a method to decide if one is a permutation of the
- * other.
- * @name isPermutation
- * @param {*} str1 
- * @param {*} str2 
- * @returns {boolean}
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+/**
+ * Rotate Matrix: Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, 
+ * write a method to rotate the image by 90 degrees. Can you do this in place?
+ * 
+ * @name rotateMatrix
+ * @param {*} arr 
+ * @returns {*} arr
  */
-&nbsp;
-const isPermutation = (str1, str2) =&gt; {
-    const trackObj = {};
-    const strLen = str1.length;
-&nbsp;
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (strLen != str2.length) <span class="cstat-no" title="statement not covered" >return false;</span>
-&nbsp;
-    for (let i = 0; i &lt; strLen; i++) {
-        let item = str1[i];
-        <span class="missing-if-branch" title="if path not taken" >I</span>if (trackObj[item]) <span class="cstat-no" title="statement not covered" >trackObj[item]++;</span>
-        else trackObj[item] = 1;
+const rotateMatrix = (arr) =&gt; {
+    const N = arr.length;
+    for (let i = 0; i &lt; N/2; i++) {
+        let layer = N-i-1;
+        for (let j = i; j &lt; layer; j++) {
+            let offset = j-i;
+            // Swap operation
+            let temp = arr[i][j];
+            arr[i][j] = arr[layer-offset][i];
+            arr[layer-offset][i] = arr[layer][layer-offset];
+            arr[layer][layer-offset] = arr[j][layer];
+            arr[j][layer] = temp;
+        }
     }
-&nbsp;
-    for (let i = 0; i &lt; strLen; i++) {
-        let item = str2[i];
-        if (!trackObj[item]) return false;
-        else trackObj[item]--;
-    }
-&nbsp;
-    return true;
+    return arr;
 }
 &nbsp;
-module.exports = isPermutation;</pre></td></tr>
+module.exports = rotateMatrix;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
