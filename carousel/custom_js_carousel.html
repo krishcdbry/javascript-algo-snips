@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+      #outer {
+        width: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #inner {
+        width: 900px;
+        display: none;
+        transform: translateX(0);
+        transition: transform 0.3s ease-out;
+    }
+
+    img {
+        width: 300px;
+        object-fit: cover; 
+    }
+
+    .arrow {
+        text-decoration: none;
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        transform: translate3d(0, -50%, 0);
+        color: #fff;
+        background: rgba(0,0,0,0.5);
+        padding: 7px;
+        padding-bottom:10px;
+    }
+
+    .left {
+        left: 0;
+    }
+
+    .right {
+        right: 0; 
+    }
+
+  </style>
+</head>
+<body>
+  
+ <div id="outer">
+   <div id="inner">
+     <img src="http://getwallpapers.com/wallpaper/full/1/b/1/1051789-1080p-nature-wallpaper-1920x1080-ios.jpg"/> 
+     <img src="https://wallpaperplay.com/walls/full/1/7/4/286153.jpg"/> 
+     <img src="https://cooldigital.photography/wp-content/uploads/2018/01/Waterfall-hidden-in-the-tropical-jungle-Nature-Wallpaper-620x413.jpg"/> 
+     <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Images-Download-HD-Nature-Backgrounds.jpg"/>
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiG5PJlSi_W8401AIjQFde-pDaDK_pW73_V_nyqw-o-2NWWsw0_g"/>
+   </div>
+   <a href="javascript:;" class="arrow left"><</a>
+   <a href="javascript:;" class="arrow right">></a>
+ </div>
+  
+ <script>
+     
+    window.addEventListener('load', () => {
+        const inner = document.querySelector('#inner');
+        const imgs = document.querySelectorAll('IMG');
+        const leftArrow = document.querySelector('.left');
+        const rightArrow = document.querySelector('.right');
+        let totalWidth = imgs.length*300;
+        let currentWidth = 0;
+  
+        inner.style.width = totalWidth+"px";
+        inner.style.display = "flex";
+
+        const slide = (left) => {
+            if (left) {
+                if (Math.abs(currentWidth) >= 300) currentWidth += 300;
+                else currentWidth = -totalWidth+300;
+            }
+            else {
+                if (Math.abs(currentWidth) >= totalWidth-300) currentWidth = 0;
+                else currentWidth -= 300;
+            }
+
+            inner.style.transform = `translateX(${currentWidth}px)`;
+        }
+    
+
+        leftArrow.addEventListener('click', () => {
+            slide(1);
+        });
+        rightArrow.addEventListener('click', () => {
+            slide();
+        });
+    })
+
+ </script>
+</body>
+</html>
