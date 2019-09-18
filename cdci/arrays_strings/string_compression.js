@@ -14,7 +14,7 @@ const stringCompression = (str) => {
     let newString = "";
     let currentChar = str[0];
     let currentCount = 0;
-    let strLength = str.length;
+    const strLength = str.length;
 
     for (let i = 0; i < strLength; i++) {
         if (currentChar != str[i]) {
