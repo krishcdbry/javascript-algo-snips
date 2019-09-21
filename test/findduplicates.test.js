@@ -1,4 +1,4 @@
-const findDuplicates = require('../findduplicates.js');
+const findDuplicates = require('../algo/findduplicates.js');
 
 const K1 = [1,2,3,4,5];
 const K2 = [10,2,12,1,6,3];

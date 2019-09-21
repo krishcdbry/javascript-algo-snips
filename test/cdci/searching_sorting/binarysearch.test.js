@@ -1,4 +1,4 @@
-const binarySearch = require("../../cdci/binary_search");
+const binarySearch = require("../../../cdci/searching_sorting/binary_search");
 
 const K1 = [1,2,3,7,8,9,12,15,16,56,60,77,99,100];
 const TARGET1 = 56;

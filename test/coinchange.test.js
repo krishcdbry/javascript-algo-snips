@@ -1,4 +1,4 @@
-const {getCoinChange, getCoinChangeObj} = require('../coinchange.js');
+const {getCoinChange, getCoinChangeObj} = require('../algo/coinchange.js');
 
 const K1 = 10;
 const K1_SET = [2,5,3,6];

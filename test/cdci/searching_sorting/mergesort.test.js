@@ -1,4 +1,4 @@
-const mergeSort = require('../../cdci/merge_sort');
+const mergeSort = require('../../../cdci/searching_sorting/merge_sort');
 
 const K1 = [1,4,5,6,12,3,15,3,2,20];
 const K1_RES = [1,2,3,3,4,5,6,12,15,20];
