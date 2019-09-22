@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1569087937497" clover="3.2.0">
-  <project timestamp="1569087937497" name="All files">
-    <metrics statements="237" coveredstatements="235" conditionals="88" coveredconditionals="77" methods="26" coveredmethods="26" elements="351" coveredelements="338" complexity="0" loc="237" ncloc="237" packages="4" files="18" classes="18"/>
+<coverage generated="1569158058827" clover="3.2.0">
+  <project timestamp="1569158058827" name="All files">
+    <metrics statements="246" coveredstatements="244" conditionals="90" coveredconditionals="79" methods="28" coveredmethods="28" elements="364" coveredelements="351" complexity="0" loc="246" ncloc="246" packages="4" files="19" classes="19"/>
     <package name="algo">
       <metrics statements="22" coveredstatements="22" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4"/>
       <file name="coinchange.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/algo/coinchange.js">
@@ -163,7 +163,7 @@
       </file>
     </package>
     <package name="cdci.recursion_dp">
-      <metrics statements="49" coveredstatements="48" conditionals="20" coveredconditionals="16" methods="6" coveredmethods="6"/>
+      <metrics statements="58" coveredstatements="57" conditionals="22" coveredconditionals="18" methods="8" coveredmethods="8"/>
       <file name="climbstairs.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/recursion_dp/climbstairs.js">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="12" count="1" type="stmt"/>
@@ -218,6 +218,18 @@
         <line num="19" count="9" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
+      </file>
+      <file name="powerset.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/recursion_dp/powerset.js">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
       <file name="tribonacci.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/recursion_dp/tribonacci.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
