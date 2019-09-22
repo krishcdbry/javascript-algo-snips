@@ -52,13 +52,18 @@ dispense.addEventListener('click', () => {
     calculator(Number(amount));
 })
 
-function playAudio(dispense) {
+function playAudio(dispense, callback) {
     let audio = document.createElement('AUDIO');
     audio.src = dispense ? "assets/dispense.mp3" : "assets/beep.mp3";
     audio.opacity = 0;
     soundDiv.innerHTML = "";
     soundDiv.appendChild(audio);
     audio.play();
+    if (dispense) {
+        audio.addEventListener('pause', () => {
+            callback();
+        })
+    }
 }
 
 function thakyouNote() {
@@ -75,41 +80,34 @@ function thakyouNote() {
 function renderDispenser () {
     let virtualDOM = document.createDocumentFragment();
     dispenseSummary.innerHTML = "";
-    setTimeout(() => {
-        let count = 1;
-        for (let idx = 9; idx >= 0; idx--) {
-            const key = coins[idx];
-            const item = moneyStore[key];
-            if (item) {
-                let itemElem = document.createElement('DIV');
-
-                let countLabel = document.createElement('SPAN');
-                countLabel.innerHTML = item;
-
-                let elem = document.createElement('IMG');
-                if (key >= 5) {
-                    elem.src = `assets/${key}.png`;
-                    elem.style.height = "100px";
-                }
-                else {
-                    elem = document.createElement('P')
-                    elem.innerHTML = `${key}`;
-                    elem.style.backgroundColor = colors[idx];
-                }
-                itemElem.appendChild(elem);
-                itemElem.appendChild(countLabel);
-
-                virtualDOM.appendChild(itemElem);
-                count++;
+    for (let idx = 9; idx >= 0; idx--) {
+        const key = coins[idx];
+        const item = moneyStore[key];
+        if (item) {
+            let itemElem = document.createElement('DIV');
+            let countLabel = document.createElement('SPAN');
+            countLabel.innerHTML = item;
+            let elem = document.createElement('IMG');
+            if (key >= 5) {
+                elem.src = `assets/${key}.png`;
+                elem.style.height = "100px";
             }
+            else {
+                elem = document.createElement('P')
+                elem.innerHTML = `${key}`;
+                elem.style.backgroundColor = colors[idx];
+            }
+            itemElem.appendChild(elem);
+            itemElem.appendChild(countLabel);
+
+            virtualDOM.appendChild(itemElem);
         }
-        dispenseSummary.appendChild(virtualDOM)
-        thakyouNote();
-    }, 1700);
+    }
+    dispenseSummary.appendChild(virtualDOM)
+    thakyouNote();
 }
 
 function calculator (n) {
-    playAudio("dispense");
     disabled = true;
     for (let i = 9; i >= 0; i--) {
       const coin = Number(coins[i]);
@@ -119,6 +117,6 @@ function calculator (n) {
         n = n%coin;
       }
     }
-    renderDispenser();
+    playAudio("dispense", renderDispenser);
 }
 
