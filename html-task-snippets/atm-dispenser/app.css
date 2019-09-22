@@ -207,9 +207,9 @@ button#dispense {
 
 @media (max-width: 780px) {
     .atm-dispenser {
-        max-width: 650px;
+        max-width: 680px;
     }
     .atm {
-        width: 250px;
+        width: 350px;
     }
 }
