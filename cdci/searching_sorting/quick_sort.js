@@ -1,5 +1,6 @@
 /**
  * 
+ * @name partition
  * @param {*} arr 
  * @param {*} left 
  * @param {*} j 
@@ -29,7 +30,7 @@ const partition = (arr, left, j) => {
 }
 
 /**
- * 
+ * @name sort
  * @param {*} arr 
  * @param {*} i 
  * @param {*} j 
@@ -42,7 +43,7 @@ const sort = (arr, i, j) => {
 }
 
 /**
- * 
+ * @name quickSort
  * @param {*} arr 
  */
 const quickSort = (arr) => {
