@@ -1,6 +1,7 @@
 
 /**
  * 
+ * @name sort
  * @param {*} arr 
  */
 const sort = (arr) => {
@@ -41,7 +42,7 @@ const sort = (arr) => {
   }
 
   /**
-   * 
+   * @name mergeSort
    * @param {*} arr 
    */
   const mergeSort = (arr) => {
