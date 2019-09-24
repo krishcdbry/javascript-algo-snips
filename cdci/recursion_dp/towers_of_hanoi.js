@@ -1,5 +1,10 @@
 
-function TowerOfHanoi(n) {
+
+/**
+ * @name TowerOfHanoi
+ * @param {*} n 
+ */
+const TowerOfHanoi = (n) => {
     let c = 0;
 
     const move = (n, source, destination, buffer) => {
