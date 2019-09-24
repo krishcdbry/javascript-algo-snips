@@ -1,4 +1,5 @@
 /**
+ * @name tribonacci
  * @param {number} n
  * @return {number}
  */
