@@ -1,3 +1,8 @@
+/**
+ * @name mulCalc
+ * @param {*} a 
+ * @param {*} b 
+ */
 const mulCalc = (a, b) => {
 	if (b === 0) return 0;
     if (b === 1) return a;
