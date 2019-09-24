@@ -1,5 +1,6 @@
 
 /**
+ * @name calcSubsets
  * @param {number[]} nums
  * @return {number[][]}
  */
