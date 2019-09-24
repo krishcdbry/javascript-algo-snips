@@ -17,4 +17,4 @@ const ATMDispenser = (n) => {
     return obj;
   }
   
-ATMDispenser(2789); // { 2000 : 1, 500: 1, 200: 2, 100: 0, 50: 1, 20: 1, 10: 1, 5: 1, 2:2, 0:0}
+  module.exports = ATMDispenser;
