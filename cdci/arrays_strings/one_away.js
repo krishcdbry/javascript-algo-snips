@@ -9,6 +9,7 @@
  * pale, bale -> true 
  * pale, bake -> false
  * 
+ * @name oneAway
  * @param {*} str1 
  * @param {*} str2 
  * #@returns {boolean}
