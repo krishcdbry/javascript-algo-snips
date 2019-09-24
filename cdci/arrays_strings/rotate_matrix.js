@@ -12,9 +12,9 @@ const rotateMatrix = (arr) => {
     for (let i = 0; i < N/2; i++) {
         let layer = N-i-1;
         for (let j = i; j < layer; j++) {
-            let offset = j-i;
+            const offset = j-i;
             // Swap operation
-            let temp = arr[i][j];
+            const temp = arr[i][j];
             arr[i][j] = arr[layer-offset][i];
             arr[layer-offset][i] = arr[layer][layer-offset];
             arr[layer][layer-offset] = arr[j][layer];
