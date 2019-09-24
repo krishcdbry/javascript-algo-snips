@@ -15,6 +15,7 @@
  */
 
  /**
+ * @param letterCasePermutation
  * @param {string} S
  * @return {string[]}
  */
