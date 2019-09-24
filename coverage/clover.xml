@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1569158058827" clover="3.2.0">
-  <project timestamp="1569158058827" name="All files">
-    <metrics statements="246" coveredstatements="244" conditionals="90" coveredconditionals="79" methods="28" coveredmethods="28" elements="364" coveredelements="351" complexity="0" loc="246" ncloc="246" packages="4" files="19" classes="19"/>
+<coverage generated="1569267052137" clover="3.2.0">
+  <project timestamp="1569267052138" name="All files">
+    <metrics statements="283" coveredstatements="281" conditionals="110" coveredconditionals="99" methods="34" coveredmethods="34" elements="427" coveredelements="414" complexity="0" loc="283" ncloc="283" packages="4" files="22" classes="22"/>
     <package name="algo">
-      <metrics statements="22" coveredstatements="22" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4"/>
+      <metrics statements="36" coveredstatements="36" conditionals="14" coveredconditionals="13" methods="6" coveredmethods="6"/>
+      <file name="case_permutations.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/algo/case_permutations.js">
+        <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="17" type="stmt"/>
+        <line num="27" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="31" count="10" type="cond" truecount="4" falsecount="0"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+      </file>
       <file name="coinchange.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/algo/coinchange.js">
         <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
         <line num="19" count="1" type="stmt"/>
@@ -163,7 +180,7 @@
       </file>
     </package>
     <package name="cdci.recursion_dp">
-      <metrics statements="58" coveredstatements="57" conditionals="22" coveredconditionals="18" methods="8" coveredmethods="8"/>
+      <metrics statements="81" coveredstatements="80" conditionals="36" coveredconditionals="32" methods="12" coveredmethods="12"/>
       <file name="climbstairs.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/recursion_dp/climbstairs.js">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="12" count="1" type="stmt"/>
@@ -219,6 +236,23 @@
         <line num="21" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
       </file>
+      <file name="multiplyRecursive.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/recursion_dp/multiplyRecursive.js">
+        <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="18" type="stmt"/>
+        <line num="6" count="18" type="stmt"/>
+        <line num="8" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="12" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
       <file name="powerset.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/recursion_dp/powerset.js">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="7" count="1" type="cond" truecount="2" falsecount="0"/>
@@ -230,6 +264,18 @@
         <line num="16" count="3" type="stmt"/>
         <line num="17" count="3" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
+      </file>
+      <file name="towers_of_hanoi.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/recursion_dp/towers_of_hanoi.js">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="78" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="38" type="stmt"/>
+        <line num="8" count="38" type="stmt"/>
+        <line num="9" count="38" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
       </file>
       <file name="tribonacci.js" path="/Users/krishcdbry/krishWork/mylocal/javascript-series/cdci/recursion_dp/tribonacci.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

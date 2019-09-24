@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://fiddle.jshell.net/_display/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title></title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./dummy.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">//<![CDATA[
+
+    window.onload=function(){
+      
+let test1 = { test1 : 1 }
+let test2 = { test2 : 2 }
+
+/* function car(model = "") {
+  this.name = "car";
+  this.model = model;
+}
+
+car.prototype.ispetrol = () => {};
+car.prototype.ispetrol = () => {};
+car.prototype.ispetrol = () => {};
+
+let bmw = new car("bmw");
+bmw.petrol = true;
+
+let audi = new car("audi");
+audi.disel = true;
+
+
+bmw.__proto__.modda = "modda";
+
+console.log(bmw, audi); */
+
+function vehicle (type) {
+	this.type = type || "";
+}
+
+function car(name = "", model = "") {
+	this.name = name;
+  this.model = model;
+}
+
+car.prototype = new vehicle("Car");
+
+console.log(new car("BMW"));
+
+
+
+
+
+
+    }
+
+  //]]></script>
+
+</head>
+<body>
+    
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: ""
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+</body></html>

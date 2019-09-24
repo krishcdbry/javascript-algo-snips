@@ -1,10 +1,11 @@
 /**
+ * @name threeSum
  * @param {number[]} nums
  * @return {number[][]}
  */
-var threeSum = function(nums) {
+const threeSum = (nums) => {
     const trackObj = {};
-    let res = [];
+    const res = [];
     
     const isUnique = (arr) => {
         return res.find(item => {
