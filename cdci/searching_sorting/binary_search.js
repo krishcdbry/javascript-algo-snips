@@ -1,6 +1,6 @@
 
 /**
- * 
+ * @name binarySearch
  * @param {*} arr 
  * @param {*} target 
  */
