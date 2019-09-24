@@ -15,6 +15,12 @@ there are five solutions: {2,2,2,2,2}, {2,2,3,3}, {2,2,6}, {2,3,5} and {5,5}.
 So the output should be 5.
 */
 // Method 1 with Arrays
+
+/**
+ * @name getCoinChange
+ * @param {*} n 
+ * @param {*} c 
+ */
 function getCoinChange(n, c) {
     const arrObj = new Array(n + 1).fill(0);
     const cLen = c.length;
@@ -30,6 +36,11 @@ function getCoinChange(n, c) {
 }
 
 // Method 2 with Key,Val pair - Better space complexity 
+/**
+ * @name getCoinChangeObj
+ * @param {*} n 
+ * @param {*} c 
+ */
 function getCoinChangeObj(n, c) {
     const arrObj = {}
     const cLen = c.length;
